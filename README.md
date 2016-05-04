@@ -94,16 +94,17 @@ BINTRAY_KEY=bintray API Key
 ```
 并且你的OS是Windows， 并且是XP，那么一般是在` C:\Documents and Settings\用户名\.gradle`，而如果是win7以上，那么是在`c:\Users\用户名\.gradle`。
 
-###2. 修改library目录下的`build.gradle`文件
-首先在你的library项目中的`build.gradle`添加以下的构建脚本依赖：
+###2. 修改你的项目根目录下的`build.gradle`文件
+首先在你的项目根目录中的`build.gradle`添加以下的构建脚本依赖：
 ```
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:3.1.1"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
     }
 }
 ```
